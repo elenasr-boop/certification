@@ -6,7 +6,6 @@ import { List } from "../list/list";
 export function Main () {
     return (
         <Container>
-            Main
             <SearchBar />
             <List />
         </Container>
