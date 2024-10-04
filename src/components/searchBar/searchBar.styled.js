@@ -28,4 +28,5 @@ export const Input = styled.input`
 export const SearchImg = styled.img`
   width: 30px;
   height: 30px;
+  cursor: pointer;
 `;
