@@ -19,14 +19,16 @@ export function SearchBar({ setIsFirstRequest }: SearchBarProps) {
 
   function search() {
     getUsers(request).then((res) => {
-      const resultList = res.map((el) => ({
+      console.log(res);
+      const resultList = res.items.map((el) => {
+       return ({
         id: el.id,
         login: el.login,
         img: el.avatar_url,
         url: el.html_url,
         score: el.score,
-      }));
-      dispatch(setUser(resultList));
+      })});
+      dispatch(setUser({users: resultList, totalCount: res.total_count, currentPage: 1}));
       
     setIsFirstRequest(false);
     });
@@ -43,7 +45,7 @@ export function SearchBar({ setIsFirstRequest }: SearchBarProps) {
       <Input
         onChange={handleInputChange}
         onKeyUp={handleKeyPress}
-        placeholder="Введите запрос"
+        placeholder="Введите логин"
         type="text"
       />
       <SearchImg src="../search.svg" alt="Поиск" onClick={() => search()} />

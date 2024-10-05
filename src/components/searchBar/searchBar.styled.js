@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SearchBarStyled = styled.div`
   background-color: #f2f2f2;
   height: 40px;
-  border-radius: 20px;
+  border-radius: 40px;
   padding-left: 20px;
   padding-right: 20px;
   border: solid 3px #5e0194;
