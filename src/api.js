@@ -1,7 +1,8 @@
 import { Octokit } from "@octokit/core";
+import config from "./config.json";
 
 const octokit = new Octokit({
-  auth: "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",
+  auth: config.githubToken,
 });
 
 export async function getUsers(request, isIncrease) {
