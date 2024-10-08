@@ -2,12 +2,10 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type userType = {
   id: string;
-  name: string;
   login: string;
   img: string;
   url: string;
   score: number;
-  repos: number;
 };
 
 type userState = {
