@@ -14,6 +14,10 @@ type userState = {
   users: userType[];
   totalCount: number;
   currentPage: number;
+  nextPage?: string,
+  prevPage?: string;
+  lastPage?: string,
+  firstPage?: string,
 };
 
 const initialState: userState = {
