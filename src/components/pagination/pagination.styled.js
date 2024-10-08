@@ -6,6 +6,10 @@ export const PaginationStyled = styled.div`
   gap: 40px;
   font-size: 16px;
   align-items: center;
+
+  @media (max-width: 563px) {
+    gap: 10px;
+  }
 `;
 
 export const Button = styled.button`
@@ -18,4 +22,18 @@ export const Button = styled.button`
   gap: 10px;
   color: #f2f2f2;
   font-size: 16px;
+`;
+
+export const Img = styled.img`
+width: 30px;
+
+@media (max-width: 563px) {
+  width: 15px;
+}
+`;
+
+export const Span = styled.span`
+@media (max-width: 563px) {
+  display: none;
+}
 `;
