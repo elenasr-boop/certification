@@ -8,7 +8,7 @@ export const Container = styled.div`
     padding-bottom: 40px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     color: #fff;
     justify-content: center;
 `;
