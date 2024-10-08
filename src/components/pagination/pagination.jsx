@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, PaginationStyled } from "./pagination.styled";
+import { Button, Img, PaginationStyled, Span } from "./pagination.styled";
 import { useAppDispatch, useAppSelector } from "../../store/store.ts";
 import { changePage } from "../../api.js";
 import { setUser } from "../../store/features/usersSlice.ts";
@@ -78,33 +78,33 @@ export function Pagination() {
     <PaginationStyled>
       {firstPage && (
         <Button onClick={() => onPageButton(firstPage, 1)}>
-          <img
+          <Img
             width="30"
             height="30"
             src="https://img.icons8.com/nolan/30/rewind.png"
           />
-          В начало
+          <Span>В начало</Span>
         </Button>
       )}
       {prevPage && (
         <Button onClick={() => onPageButton(prevPage, currenPage - 1)}>
-          <img
+          <Img
             width="30"
             height="30"
             src="https://img.icons8.com/nolan/30/1A6DFF/C822FF/sort-left--v1.png"
           />
-          Предыдущая
+          <Span>Предыдущая</Span>
         </Button>
       )}
       Страница {currenPage} из {Math.floor(totalCount / 50) + 1}
       {nextPage && (
         <Button onClick={() => onPageButton(nextPage, currenPage + 1)}>
-          <img
+          <Img
             width="30"
             height="30"
             src="https://img.icons8.com/nolan/30/play.png"
           />
-          Следующая
+          <Span>Следующая</Span>
         </Button>
       )}
       {lastPage && (
@@ -113,12 +113,12 @@ export function Pagination() {
             onPageButton(lastPage, Math.floor(totalCount / 50) + 1)
           }
         >
-          <img
+          <Img
             width="30"
             height="30"
             src="https://img.icons8.com/nolan/30/fast-forward.png"
           />
-          В конец
+          <Span>В конец</Span>
         </Button>
       )}
     </PaginationStyled>
